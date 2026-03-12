@@ -1,9 +1,9 @@
 async function tempo(request, response){
      const dynamicDate = new Date();
 
-     const subsResponse = await fetch("https://api.convertkit.com/v3/subscribers?api_secret=ZJwL0hi01EvB90CIpsyw1e0fGRzPfw1Q");
+     const subsResponse = await fetch("https://brasilapi.com.br/api/cvm/corretoras/v1");
      const subsResponseJSON = await subsResponse.json();
-     const inscritos = subsResponseJSON.total_subscribers;
+     const inscritos = subsResponseJSON.length;
 
      response.json({
           date: dynamicDate.toGMTString(),
